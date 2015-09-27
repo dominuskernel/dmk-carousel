@@ -1,10 +1,11 @@
 {
-  "name": "dm-menu",
-  "version": "0.0.0",
+  "name": "dmk-carousel",
+  "version": "0.1.0",
   "dependencies": {
-    "angular-bootstrap": "https://github.com/angular-ui/bootstrap-bower.git",
-    "bootstrap": "^3",
-    "jquery":"^2.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "angular-bootstrap": "^0.13",
+    "bootstrap-sass": "^3",
+    "jquery": "^2"
+  }
 }

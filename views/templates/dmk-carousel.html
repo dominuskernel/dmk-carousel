@@ -1,0 +1,8 @@
+
+<div class="dmk-carousel">
+  <carousel interval="dmkInterval" no-wrap="dmkNoWrap" class="carousel-custom">
+    <slide ng-repeat="slide in dmkSlides" active="slide.active" class="slide-custom"><img ng-src="{{slide.image}}" alt="{{slide.text}}"/>
+      <div class="carousel-caption"><span class="text">{{slide.text}}</span></div>
+    </slide>
+  </carousel>
+</div>

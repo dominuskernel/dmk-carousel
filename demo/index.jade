@@ -1,6 +1,58 @@
 doctype html
-html
+html(ng-app="app")
     include ./includes/head
-    body
-        h1 Ready
+    body(ng-controller="LoadCarousel")
+        h1 Dmk-Carousel
+        h3 Basic Example
+        button(type="button" ng-click="changeSlide('blog')") blog
+        button(type="button" ng-click="changeSlide('programming')") programming
+        button(type="button" ng-click="changeSlide('westport')") westport
+
+        div(dmk-carousel dmk-slides="slides" dmk-interval="interval" dmk-no-wrap="noWrap")
+
+        pre.
+            button(type="button" ng-click="changeSlide('blog')") blog
+            button(type="button" ng-click="changeSlide('programming')") programming
+            button(type="button" ng-click="changeSlide('westport')") westport
+
+            div(dmk-carousel dmk-slides="slides" dmk-interval="interval" dmk-no-wrap="noWrap")
+
+        h3 Controller in Coffescript
+        pre.
+            LoadCarousel = ($scope, $http)->
+            $scope.interval = 5000
+            $scope.noWrap = false
+            $http.get('mocks/slides.json').success((data)->
+            $scope.slides = data
+                return
+            )
+            $scope.changeSlide = (slide) ->
+                for i in [0...$scope.slides.length]
+                    $scope.slides[i].active = false
+                for i in [0...$scope.slides.length]
+                    if slide == $scope.slides[i].text
+                        $scope.slides[i].active = true
+                return
+
+            angular
+                .module('app', ['dmk.carousel'])
+                .controller('LoadCarousel', LoadCarousel)
+
+            LoadCarousel.$inject = ['$scope', '$http']
+
+        h3 File scripts
+        pre.
+            script(src='your_src_path/bower_components/jquery/dist/jquery.min.js')
+            script(src='your_src_path/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js')
+            script(src='your_src_path/bower_components/angular/angular.min.js')
+            script(src='your_src_path/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js')
+            script(src='your_src_path/bower_components/dmk-carousel/views/scripts/carousel.js')
+            script(src='your_src_path_app.js')
+
+        h3 File Sass
+        pre.
+            $icon-font-path:"your_src_path/bower_components/bootstrap-sass/assets/fonts/bootstrap/"
+            @import "your_src_path/bower_components/bootstrap-sass/assets/stylesheets/bootstrap"
+            @import "your_src_path/bower_componets/dmk-carousel/src/stylesheets/dmk-carousel"
+
         include ./includes/scripts

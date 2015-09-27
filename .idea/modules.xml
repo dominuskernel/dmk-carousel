@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/component-generator.iml" filepath="$PROJECT_DIR$/.idea/component-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/dmk-carousel.iml" filepath="$PROJECT_DIR$/.idea/dmk-carousel.iml" />
     </modules>
   </component>
 </project>

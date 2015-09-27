@@ -1,0 +1,7 @@
+.dmk-carousel
+    carousel.carousel-custom(interval="dmkInterval" no-wrap="dmkNoWrap")
+        slide.slide-custom(ng-repeat="slide in dmkSlides" active="slide.active")
+            img(ng-src="{{slide.image}}" alt="{{slide.text}}")
+            .carousel-caption
+                span.text {{slide.text}}
+
