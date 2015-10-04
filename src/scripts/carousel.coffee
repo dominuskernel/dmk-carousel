@@ -4,7 +4,7 @@ do ->
     .module('dmk.carousel',['ui.bootstrap'])
     .directive('dmkCarousel', [ ->
       restrict: 'A'
-      templateUrl: '../templates/dmk-carousel.html'
+      templateUrl: '/bower_components/dmk-carousel/templates/dmk-carousel.html'
       scope:
         dmkInterval: "="
         dmkSlides: "="

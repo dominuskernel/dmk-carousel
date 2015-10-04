@@ -1,0 +1,10 @@
+# Folders
+bower_components/
+.idea/
+images/
+mocks/
+node_modules/
+index.html
+app.js
+main.css
+.sass-cache/

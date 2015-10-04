@@ -1,11 +1,11 @@
 [
   {
-    "active": false,
+    "active": true,
     "image":"images/blog.png",
     "text":"blog"
   },
   {
-    "active": true,
+    "active": false,
     "image":"images/programming.png",
     "text":"programming"
   },
